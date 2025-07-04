@@ -43,8 +43,41 @@ from bs4 import BeautifulSoup
 
 # Version 2
 
-import requests
-from bs4 import BeautifulSoup
+#
+# url = "https://realpython.com/"
+# response = requests.get(url)
+# soup = BeautifulSoup(response.text, "html.parser")
+#
+# keywords = ['KI', 'AI', 'Python', 'Technologie', 'Technology']
+#
+# h2_titles = []
+# a_titles = []
+#
+# for tag in soup.find_all('h2'):
+#     text = tag.get_text(strip=True)
+#     if text:
+#         h2_titles.append(text)
+#         for keyword in keywords:
+#             if keyword.lower() in text.lower():
+#                 print(f"Found da '{keyword}' in article title: {text}")
+# for tag in soup.find_all('a'):
+#     text = tag.get_text(strip=True)
+#     if text:
+#         a_titles.append(text)
+#         for keyword in keywords:
+#             if keyword.lower() in text.lower():
+#                 print(f"Found da '{keyword}' in link title: {text}")
+#
+# with open("title.txt", "w", encoding="utf-8") as file:
+#     file.write("=== Articles (h2) ===\n \n")
+#     for title in h2_titles:
+#         file.write(title + "\n")
+#     file.write("\n=== Links (a) ===\n \n")
+#     for title in a_titles:
+#         file.write(title + "\n")
+#
+
+#Version 3
 
 url = "https://realpython.com/"
 response = requests.get(url)
@@ -53,27 +86,38 @@ soup = BeautifulSoup(response.text, "html.parser")
 keywords = ['KI', 'AI', 'Python', 'Technologie', 'Technology'] # I mean... KI and Technologie make little sense in on an English site.... buuuuut I added it anyway.
 
 h2_titles = []
-a_titles = []
+article_links = []
 
 for tag in soup.find_all('h2'):
-    text = tag.get_text(strip=True)
+    text = tag.get_text().replace("\n", " ").strip()
+
     if text:
         h2_titles.append(text)
         for keyword in keywords:
             if keyword.lower() in text.lower():
-                print(f"Found da '{keyword}' in article title: {text}")
-for tag in soup.find_all('a'):
-    text = tag.get_text(strip=True)
-    if text:
-        a_titles.append(text)
+                print(f"Found '{keyword}' in article title: {text}")
+
+for tag in soup.find_all('a', href=True):
+    href = tag['href']
+    text = tag.get_text().replace("\n", " ").strip()
+    if (("/article" in href) or ("/tutorial" in href) or (href.startswith("/") and len(href) > 1)) \
+        and not href.startswith("#") and text:
+        url_full = href if href.startswith("http") else "https://realpython.com" + href
+        article_links.append((text, url_full))
         for keyword in keywords:
             if keyword.lower() in text.lower():
-                print(f"Found da '{keyword}' in link title: {text}")
+                print(f"Found '{keyword}' in article link: {text}")
 
-with open("title.txt", "w", encoding="utf-8") as file:
-    file.write("=== Articles (h2) ===\n \n")
+with open("titles_and_links.txt", "w", encoding="utf-8") as file:
+    file.write("=== Article Headlines (h2) ===\n\n")
     for title in h2_titles:
         file.write(title + "\n")
-    file.write("\n=== Links (a) ===\n \n")
-    for title in a_titles:
-        file.write(title + "\n")
+    file.write("\n=== Article Links (a) ===\n\n")
+    for text, link in article_links:
+        file.write(f"{text} : {link}\n")
+    file.write("\n=== Keywords Found ===\n\n")
+    for keyword in keywords:
+        file.write(f"Keyword: {keyword}\n")
+
+
+
