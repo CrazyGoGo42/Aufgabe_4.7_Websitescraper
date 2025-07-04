@@ -80,6 +80,7 @@ from bs4 import BeautifulSoup
 #
 
 #Version 3
+import re
 
 url = "https://realpython.com/"
 response = requests.get(url)
@@ -89,6 +90,7 @@ keywords = ['KI', 'AI', 'Python', 'Technologie', 'Technology'] # I mean... KI an
 
 h2_titles = []
 article_links = []
+found_keywords = []
 
 for tag in soup.find_all('h2'):
     text = tag.get_text().replace("\n", " ").replace("\xa0", " ").strip() #replace("\xa0", " ") hallelujah, fixed this dumb issue with non-breaking spaces
@@ -96,8 +98,9 @@ for tag in soup.find_all('h2'):
     if text:
         h2_titles.append(text)
         for keyword in keywords:
-            if keyword.lower() in text.lower():
-                print(f"Found '{keyword}' in article title: {text}")
+            if re.search(rf'\b{re.escape(keyword)}\b', text, re.IGNORECASE): #this is dope.
+                found_keywords.append((keyword, 'h2', text))
+                print(f"Found da '{keyword}' in article title: {text}")
 
 for tag in soup.find_all('a', href=True):
     href = tag['href']
@@ -107,8 +110,9 @@ for tag in soup.find_all('a', href=True):
         url_full = href if href.startswith("http") else "https://realpython.com" + href
         article_links.append((text, url_full))
         for keyword in keywords:
-            if keyword.lower() in text.lower():
-                print(f"Found '{keyword}' in article link: {text}")
+            if re.search(rf'\b{re.escape(keyword)}\b', text, re.IGNORECASE):
+                found_keywords.append((keyword, 'a', text))
+                print(f"Found da '{keyword}' in article link: {text}")
 
 with open("titles_and_links.csv", "w", encoding="utf-8") as file:
     file.write("=== Article Headlines (h2) ===\n\n")
@@ -118,8 +122,12 @@ with open("titles_and_links.csv", "w", encoding="utf-8") as file:
     for text, link in article_links:
         file.write(f"{text} : {link}\n")
     file.write("\n=== Keywords Found ===\n\n")
-    for keyword in keywords:
-        file.write(f"Keyword: {keyword}\n")
+    if found_keywords:
+        for keyword, tagtype, text in found_keywords:
+            where = "h2 title" if tagtype == 'h2' else "article link"
+            file.write(f"Keyword '{keyword}' found in {where}: {text}\n")
+    else:
+        file.write("No keywords found.\n")
 
 
 
