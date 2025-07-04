@@ -1,0 +1,191 @@
+=== Article Headlines (h2) ===
+
+Python 3.14 Preview: Template Strings (T-Strings)
+Podcasts
+Explore Real Python
+New Releases
+Implementing the Factory Method Pattern in Python
+Use TorchAudio to Prepare Audio Data for Deep Learning
+Your Guide to the Python print() Function
+Starting With DuckDB and Python
+Python enumerate(): Simplify Loops That Need Counters
+Python Project: Build a Word Count Command-Line App
+Exploring Python's list Data Type With Examples
+Write Pythonic and Clean Code With namedtuple
+Defining Your Own Python Function
+Python Continuous Integration and Deployment Using GitHub Actions
+Python Hits the Big Screen and Other Python News for June 2025
+How to Find an Absolute Value in Python
+Execute Your Python Scripts With a Shebang
+How Can You Structure Your Python Script?
+Control Flow Structures in Python
+The LEGB Rule & Understanding Python Scope
+marimo: A Reactive, Reproducible Notebook
+Nested Loops in Python
+
+=== Article Links (a) ===
+
+Start Here : https://realpython.com/start-here/
+Python Tutorials →In-depth articles and video courses : https://realpython.com/search?kind=article&kind=course&order=newest
+Learning Paths →Guided study plans for accelerated learning : https://realpython.com/learning-paths/
+Quizzes & Exercises →Check your learning progress : https://realpython.com/quizzes/
+Browse Topics →Focus on a specific area or skill level : https://realpython.com/tutorials/all/
+Community Chat →Learn with other Pythonistas : https://realpython.com/community/
+Office Hours →Live Q&A calls with Python experts : https://realpython.com/office-hours/
+Podcast →Hear what’s new in the world of Python : https://realpython.com/podcasts/rpp/
+Books →Round out your knowledge and learn offline : https://realpython.com/products/books/
+Reference →Concise definitions for common Python terms : https://realpython.com/ref/
+Code Mentor →BetaPersonalized code assistance & learning tools : https://realpython.com/mentor/
+Unlock All Content → : https://realpython.com/account/join/
+Learner Stories : https://realpython.com/learner-stories/
+Python Newsletter : https://realpython.com/newsletter/
+Meet the Team : https://realpython.com/team/
+Become a Tutorial Writer : https://realpython.com/write-for-us/
+Become a Video Instructor : https://realpython.com/become-an-instructor/
+Search : https://realpython.com/search
+Join : https://realpython.com/account/join/
+Sign‑In : https://realpython.com/account/login/?next=%2F
+NEW : https://realpython.com/python-t-strings/
+Python 3.14 Preview: Template Strings (T-Strings) : https://realpython.com/python-t-strings/
+intermediate : https://realpython.com/tutorials/intermediate/
+python : https://realpython.com/tutorials/python/
+Podcasts : https://realpython.com/podcasts/rpp/
+View All » : https://realpython.com/podcasts/rpp/
+Browse Topics : https://realpython.com/tutorials/all/
+Guided Learning Paths : https://realpython.com/learning-paths/
+Basics : https://realpython.com/search?level=basics
+Intermediate : https://realpython.com/search?level=intermediate
+Advanced : https://realpython.com/search?level=advanced
+api : https://realpython.com/tutorials/api/
+best-practices : https://realpython.com/tutorials/best-practices/
+career : https://realpython.com/tutorials/career/
+community : https://realpython.com/tutorials/community/
+databases : https://realpython.com/tutorials/databases/
+data-science : https://realpython.com/tutorials/data-science/
+data-structures : https://realpython.com/tutorials/data-structures/
+data-viz : https://realpython.com/tutorials/data-viz/
+devops : https://realpython.com/tutorials/devops/
+django : https://realpython.com/tutorials/django/
+docker : https://realpython.com/tutorials/docker/
+editors : https://realpython.com/tutorials/editors/
+flask : https://realpython.com/tutorials/flask/
+front-end : https://realpython.com/tutorials/front-end/
+gamedev : https://realpython.com/tutorials/gamedev/
+gui : https://realpython.com/tutorials/gui/
+machine-learning : https://realpython.com/tutorials/machine-learning/
+numpy : https://realpython.com/tutorials/numpy/
+projects : https://realpython.com/tutorials/projects/
+python : https://realpython.com/tutorials/python/
+testing : https://realpython.com/tutorials/testing/
+tools : https://realpython.com/tutorials/tools/
+web-dev : https://realpython.com/tutorials/web-dev/
+web-scraping : https://realpython.com/tutorials/web-scraping/
+Learning PathsGuided study plans for accelerated learning : https://realpython.com/learning-paths/
+Python TutorialsIn-depth articles and step-by-step video courses : https://realpython.com/search?kind=article&kind=course&order=newest
+Quizzes & ExercisesEvaluate your Python knowledge with quick tests : https://realpython.com/quizzes/
+Browse TopicsFocus on a specific area or skill level : https://realpython.com/tutorials/all/
+Community ChatLearn with other Pythonistas : https://realpython.com/community/
+Office HoursLive Q&A calls with experts from Real Python : https://realpython.com/office-hours/
+PodcastHear what’s new in the world of Python : https://realpython.com/podcasts/rpp/
+BooksRound out your knowledge and learn offline : https://realpython.com/products/books/
+ReferenceConcise definitions for common Python terms : https://realpython.com/ref/
+Code MentorBetaPersonalized code assistance & intelligent learning tools : https://realpython.com/mentor/
+New Releases : https://realpython.com/search?order=newest
+View All » : https://realpython.com/search?order=newest
+Implementing the Factory Method Pattern in Python : https://realpython.com/courses/factory-method-pattern/
+intermediate : https://realpython.com/tutorials/intermediate/
+best-practices : https://realpython.com/tutorials/best-practices/
+Use TorchAudio to Prepare Audio Data for Deep Learning : https://realpython.com/python-torchaudio/
+intermediate : https://realpython.com/tutorials/intermediate/
+machine-learning : https://realpython.com/tutorials/machine-learning/
+Your Guide to the Python print() Function : https://realpython.com/python-print/
+basics : https://realpython.com/tutorials/basics/
+python : https://realpython.com/tutorials/python/
+Starting With DuckDB and Python : https://realpython.com/courses/starting-duckdb-python/
+intermediate : https://realpython.com/tutorials/intermediate/
+databases : https://realpython.com/tutorials/databases/
+data-science : https://realpython.com/tutorials/data-science/
+python : https://realpython.com/tutorials/python/
+Python enumerate(): Simplify Loops That Need Counters : https://realpython.com/python-enumerate/
+basics : https://realpython.com/tutorials/basics/
+best-practices : https://realpython.com/tutorials/best-practices/
+Python Project: Build a Word Count Command-Line App : https://realpython.com/courses/word-count-app-project/
+intermediate : https://realpython.com/tutorials/intermediate/
+projects : https://realpython.com/tutorials/projects/
+Remove ads : https://realpython.com/account/join/
+Exploring Python's list Data Type With Examples : https://realpython.com/courses/list-data-type-with-examples/
+intermediate : https://realpython.com/tutorials/intermediate/
+data-structures : https://realpython.com/tutorials/data-structures/
+python : https://realpython.com/tutorials/python/
+Write Pythonic and Clean Code With namedtuple : https://realpython.com/python-namedtuple/
+intermediate : https://realpython.com/tutorials/intermediate/
+data-structures : https://realpython.com/tutorials/data-structures/
+python : https://realpython.com/tutorials/python/
+Defining Your Own Python Function : https://realpython.com/defining-your-own-python-function/
+basics : https://realpython.com/tutorials/basics/
+python : https://realpython.com/tutorials/python/
+Python Continuous Integration and Deployment Using GitHub Actions : https://realpython.com/courses/cicd-github-actions/
+advanced : https://realpython.com/tutorials/advanced/
+devops : https://realpython.com/tutorials/devops/
+Python Hits the Big Screen and Other Python News for June 2025 : https://realpython.com/python-news-june-2025/
+community : https://realpython.com/tutorials/community/
+How to Find an Absolute Value in Python : https://realpython.com/python-absolute-value/
+basics : https://realpython.com/tutorials/basics/
+python : https://realpython.com/tutorials/python/
+Execute Your Python Scripts With a Shebang : https://realpython.com/courses/execute-python-scripts-with-shebang/
+intermediate : https://realpython.com/tutorials/intermediate/
+best-practices : https://realpython.com/tutorials/best-practices/
+How Can You Structure Your Python Script? : https://realpython.com/python-script-structure/
+basics : https://realpython.com/tutorials/basics/
+python : https://realpython.com/tutorials/python/
+Control Flow Structures in Python : https://realpython.com/python-control-flow/
+intermediate : https://realpython.com/tutorials/intermediate/
+python : https://realpython.com/tutorials/python/
+The LEGB Rule & Understanding Python Scope : https://realpython.com/courses/legb-rule-python-scope/
+intermediate : https://realpython.com/tutorials/intermediate/
+python : https://realpython.com/tutorials/python/
+marimo: A Reactive, Reproducible Notebook : https://realpython.com/marimo-notebook/
+intermediate : https://realpython.com/tutorials/intermediate/
+data-science : https://realpython.com/tutorials/data-science/
+editors : https://realpython.com/tutorials/editors/
+python : https://realpython.com/tutorials/python/
+tools : https://realpython.com/tutorials/tools/
+Nested Loops in Python : https://realpython.com/nested-loops-python/
+basics : https://realpython.com/tutorials/basics/
+python : https://realpython.com/tutorials/python/
+Start Here : https://realpython.com/start-here/
+Learning Resources : https://realpython.com/search
+Code Mentor : https://realpython.com/mentor/
+Python Reference : https://realpython.com/ref/
+Learning Paths : https://realpython.com/learning-paths/
+Quizzes & Exercises : https://realpython.com/quizzes/
+Browse Topics : https://realpython.com/tutorials/all/
+Workshops : https://realpython.com/workshops/
+Books : https://realpython.com/books/
+Podcast : https://realpython.com/podcasts/rpp/
+Newsletter : https://realpython.com/newsletter/
+Community Chat : https://realpython.com/community/
+Office Hours : https://realpython.com/office-hours/
+Learner Stories : https://realpython.com/learner-stories/
+Plans & Pricing : https://realpython.com/account/join/
+Team Plans : https://realpython.com/account/join-team/
+For Business : https://realpython.com/account/join-team/inquiry/
+For Schools : https://realpython.com/account/join-team/education-inquiry/
+Reviews : https://realpython.com/learner-stories/
+About Us : https://realpython.com/about/
+Team : https://realpython.com/team/
+Sponsorships : https://realpython.com/sponsorships/
+Press Kit : https://realpython.com/media-kit/
+Merch : https://realpython.com/merch
+Privacy Policy : https://realpython.com/privacy-policy/
+Terms of Use : https://realpython.com/terms/
+Security : https://realpython.com/security/
+Contact : https://realpython.com/contact/
+
+=== Keywords Found ===
+
+Keyword: KI
+Keyword: AI
+Keyword: Python
+Keyword: Technologie
+Keyword: Technology
