@@ -1,4 +1,6 @@
 import csv
+from pydoc import replace
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -89,7 +91,7 @@ h2_titles = []
 article_links = []
 
 for tag in soup.find_all('h2'):
-    text = tag.get_text().replace("\n", " ").strip()
+    text = tag.get_text().replace("\n", " ").replace("\xa0", " ").strip() #replace("\xa0", " ") hallelujah, fixed this dumb issue with non-breaking spaces
 
     if text:
         h2_titles.append(text)
@@ -99,7 +101,7 @@ for tag in soup.find_all('h2'):
 
 for tag in soup.find_all('a', href=True):
     href = tag['href']
-    text = tag.get_text().replace("\n", " ").strip()
+    text = tag.get_text().replace("\n", " ").replace("\xa0", " ").strip()
     if (("/article" in href) or ("/tutorial" in href) or (href.startswith("/") and len(href) > 1)) \
         and not href.startswith("#") and text:
         url_full = href if href.startswith("http") else "https://realpython.com" + href
@@ -108,7 +110,7 @@ for tag in soup.find_all('a', href=True):
             if keyword.lower() in text.lower():
                 print(f"Found '{keyword}' in article link: {text}")
 
-with open("titles_and_links.txt", "w", encoding="utf-8") as file:
+with open("titles_and_links.csv", "w", encoding="utf-8") as file:
     file.write("=== Article Headlines (h2) ===\n\n")
     for title in h2_titles:
         file.write(title + "\n")
